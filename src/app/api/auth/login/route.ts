@@ -19,7 +19,7 @@ export async function POST(req: NextRequest) {
     );
   }
 
-  // ✅ Tạo JWT bằng jose///
+  // ✅ Tạo JWT bằng jose//////
   const token = await new SignJWT({
     id: user._id.toString(),
     role: user.role,

@@ -13,7 +13,7 @@ const AuthPage = () => {
     setLoading(true);
     try {
       await axios.post("/api/auth/register", values);
-      message.success("Đăng ký thành công");
+      //message.success("Đăng ký thành công");
     } catch (err: any) {
       message.error(err?.response?.data?.message || "Lỗi đăng ký");
     } finally {
@@ -25,7 +25,7 @@ const AuthPage = () => {
     setLoading(true);
     try {
       await axios.post("/api/auth/login", values);
-      message.success("Đăng nhập thành công");
+      //message.success("Đăng nhập thành công");
       router.push("/"); // hoặc redirect theo role
     } catch (err: any) {
       message.error(err?.response?.data?.message || "Lỗi đăng nhập");
