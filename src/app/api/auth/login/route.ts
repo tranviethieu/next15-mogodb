@@ -5,7 +5,7 @@ import bcrypt from "bcrypt";
 import { SignJWT } from "jose";
 
 // Tạo `Uint8Array` từ secret
-const JWT_SECRET = new TextEncoder().encode(process.env.JWT_SECRET || "secret");
+const JWT_SECRET = new TextEncoder().encode("secret");
 
 export async function POST(req: NextRequest) {
   await dbConnect();
@@ -19,7 +19,7 @@ export async function POST(req: NextRequest) {
     );
   }
 
-  // ✅ Tạo JWT bằng jose
+  // ✅ Tạo JWT bằng jose///
   const token = await new SignJWT({
     id: user._id.toString(),
     role: user.role,

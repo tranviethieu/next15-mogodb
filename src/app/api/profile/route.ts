@@ -3,7 +3,7 @@ import { cookies } from "next/headers";
 import { NextResponse } from "next/server";
 import { jwtVerify } from "jose";
 
-const JWT_SECRET = new TextEncoder().encode(process.env.JWT_SECRET || "secret");
+const JWT_SECRET = new TextEncoder().encode("secret");
 
 export async function GET() {
   const token = (await cookies()).get("token")?.value;
