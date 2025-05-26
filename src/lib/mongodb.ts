@@ -4,9 +4,9 @@ import mongoose from "mongoose";
 //const MONGODB_ = process.env.MONGODB_URI as string;
 const MONGODB_URI =
   "mongodb+srv://hieutran98tb:yyvw0zDCphsmYSAR@cluster0.bj6ivho.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
-if (!MONGODB_URI) {
-  throw new Error("Please define the MONGODB_URI environment variable");
-}
+// if (!MONGODB_URI) {
+//   throw new Error("Please define the MONGODB_URI environment variable");
+// }
 
 let cached = (global as any).mongoose;
 
